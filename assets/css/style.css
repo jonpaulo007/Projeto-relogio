@@ -16,6 +16,7 @@ body{
     justify-content: center;
 }
 
+/* Definindo altura e alinhamento dos itens da classe relogio(div pai)  */
 .relogio{
     display: flex;
     align-items: center;
@@ -27,6 +28,7 @@ body{
     box-shadow: 0px 8px 10px rgba(0, 0, 0, .5);
 }
 
+/* Definindo altura e alinhamento dos itens da classe relogio(div filho)  */
 .relogio div{
     height: 170px;
     width: 150px;
@@ -42,6 +44,7 @@ body{
     ;
 }
 
+/* Estilizando o conteudo dentro do span, tendo classe(div) relegio como pai e as outras classe filho*/
 .relogio span{
     font-weight: bolder;
     font-size: 60px;
