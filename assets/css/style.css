@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
+/* Variaveis das cores*/
+:root{
+    --bg-gradient-1: #1e1e2f;
+    --bg-gradient-2: #121212;
+    --card-bg: #1f1f1f;
+    --text-color: #ffffff;
+    --accent: #00c2ff;
+}
+
 /* Zerando a formatação padrão*/
 *{
     margin: 0;
@@ -9,11 +18,30 @@
 
 /* configurando body */
 body{
-    height: 100vh; /* Cobrindo a tela inteira */
-    background: linear-gradient(120deg, #ffe53bd8, #ff2525da);
-    display: flex; /* Alinhando os itens ao centro */
-    align-items: center; 
+    min-height: 100vh;
+    background: linear-gradient(120deg, var(--bg-gradient-1), var(--bg-gradient-2));
+    display: flex;
+    flex-direction: column;
+    color: var(--text-color);
+}
+
+/* configurando main */
+main{
+    flex: 1;
+    display: flex;
+    align-items: center;
     justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* configurando texto RELOGIO DIGITAL */
+.textoRelogio h1{
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: 6px;
+    text-transform: uppercase;
 }
 
 /* Definindo altura e alinhamento dos itens da classe relogio(div pai)  */
@@ -21,27 +49,29 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 200px;
-    width: 530px;
+    width: 90%;
+    max-width: 530px;
+    padding: 20px;
     background: transparent;
     border-radius: 5px;
     box-shadow: 0px 8px 10px rgba(0, 0, 0, .5);
 }
 
+
 /* Definindo altura e alinhamento dos itens da classe relogio(div filho)  */
 .relogio div{
+    flex: 1;
+    max-width: 150px;
     height: 170px;
-    width: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     color: #fff;
-    background: rgba(5, 5, 5, 5);
+    background: var(--card-bg);
     box-shadow: 5px 5px 15px rgba(0, 0, 0, .7);
     border-radius: 7px;
     letter-spacing: 3px;
-    ;
 }
 
 /* Estilizando o conteudo dentro do span, tendo classe(div) relegio como pai e as outras classe filho*/
@@ -52,4 +82,43 @@ body{
 
 .relogio span.tempo{
     font-size: 10px;
+}
+
+
+footer{
+    text-align: center;
+    padding: 15px;
+    color: white;
+}
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+/* Ajutando para mobile*/
+@media (max-width: 600px){
+
+    .textoRelogio h1{
+        font-size: 22px;
+        letter-spacing: 4px;
+    }
+
+    .relogio{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .relogio div{
+        width: 100%;
+        max-width: 250px;
+        height: 120px;
+    }
+
+    .relogio span{
+        font-size: 40px;
+    }
 }
