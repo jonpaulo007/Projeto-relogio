@@ -44,4 +44,4 @@ Neste projeto pratiquei:
 
 ## 📷 Preview
 
-![Preview do Projeto](./assets/preview.png)
+![Preview do Projeto](assets/img/preview.png)
